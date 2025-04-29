@@ -33,24 +33,6 @@ const Index = () => {
     }
   ];
 
-  const smallGames = [
-    {
-      id: "chess",
-      title: "StarkChess",
-      image: "/public/lovable-uploads/a5c93090-80ae-497d-af60-5c1b8631badf.png"
-    },
-    {
-      id: "snakes",
-      title: "Snakes & Ladders",
-      image: "/public/lovable-uploads/1db8ec25-4376-4757-9038-cd30bc725a94.png"
-    },
-    {
-      id: "token",
-      title: "Token Flip",
-      image: "/public/lovable-uploads/337f0cbf-48e9-4e9d-a013-13b80c63f929.png"
-    }
-  ];
-
   return (
     <div className="min-h-screen flex flex-col bg-black">
       {/* Custom Header */}
@@ -58,7 +40,7 @@ const Index = () => {
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/" className="flex items-center gap-2">
             <span className="text-purple-500 text-3xl">♚</span>
-            <span className="font-press-start text-xl text-white">STELLAR ARCADE</span>
+            <span className="text-xl text-white">STELLAR ARCADE</span>
           </Link>
           
           <div className="hidden md:flex items-center gap-8">
@@ -96,7 +78,7 @@ const Index = () => {
               </div>
             </div>
             <p className="text-yellow-400 mb-2">A fully on-chain — Gaming Hub</p>
-            <h1 className="font-press-start text-4xl md:text-6xl mb-6 text-white">
+            <h1 className="text-4xl md:text-6xl mb-6 text-white">
               Stellar Arcade
             </h1>
             <p className="text-xl md:text-xl mb-8 text-gray-300">
@@ -125,28 +107,7 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="flex items-center gap-3 mb-8">
             <span className="text-yellow-400 text-2xl">🎮</span>
-            <h2 className="font-press-start text-2xl text-white">Casino Games on Stellar</h2>
-          </div>
-
-          {/* Mini Games Carousel */}
-          <div className="mb-8">
-            <div className="flex items-center gap-3 mb-4">
-              <span className="text-purple-500 text-xl">🎮</span>
-              <h3 className="font-press-start text-lg text-white">Arcade Games on Starknet</h3>
-            </div>
-            <div className="flex gap-4 overflow-x-auto pb-4">
-              {smallGames.map(game => (
-                <div key={game.id} className="min-w-[150px] bg-gray-900 rounded-lg overflow-hidden">
-                  <div className="h-32 overflow-hidden">
-                    <img src={game.image} alt={game.title} className="w-full h-full object-cover" />
-                  </div>
-                  <div className="p-2 text-center">
-                    <p className="text-xs text-white mb-2">{game.title}</p>
-                    <button className="bg-purple-600 text-white w-full py-1 rounded text-xs">Play Now</button>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <h2 className="text-2xl text-white">Casino Games on Stellar</h2>
           </div>
 
           {/* Main Games Grid */}
@@ -170,7 +131,7 @@ const Index = () => {
       <section className="py-16 px-4 md:px-8 mt-12">
         <div className="container mx-auto">
           <div className="bg-purple-600 rounded-lg p-12 text-center">
-            <h2 className="font-press-start text-4xl mb-4 text-white">Ready to Play?</h2>
+            <h2 className="text-4xl mb-4 text-white">Ready to Play?</h2>
             <p className="text-xl mb-8 text-white">
               Connect your wallet and start playing games on Stellar today!
             </p>
@@ -190,7 +151,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="font-press-start text-lg mb-4 text-white">Stellar Arcade</h3>
+              <h3 className="text-lg mb-4 text-white">Stellar Arcade</h3>
               <p className="text-gray-400 mb-4">
                 The first on-chain gaming platform in the Stellar ecosystem. Play, earn, and own your gaming experience.
               </p>
@@ -208,7 +169,7 @@ const Index = () => {
               </div>
             </div>
             <div>
-              <h3 className="font-press-start text-lg mb-4 text-white">Quick Links</h3>
+              <h3 className="text-lg mb-4 text-white">Quick Links</h3>
               <ul className="space-y-2">
                 <li>
                   <Link to="/games" className="text-gray-400 hover:text-white">
@@ -233,7 +194,7 @@ const Index = () => {
               </ul>
             </div>
             <div>
-              <h3 className="font-press-start text-lg mb-4 text-white">Connect</h3>
+              <h3 className="text-lg mb-4 text-white">Connect</h3>
               <ul className="space-y-2">
                 <li>
                   <a href="#" className="text-gray-400 hover:text-white">

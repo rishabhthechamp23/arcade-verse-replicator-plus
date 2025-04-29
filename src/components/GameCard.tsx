@@ -27,8 +27,8 @@ const GameCard = ({ id, title, description, imageUrl, path, rating }: GameCardPr
         )}
       </div>
       <div className="p-4">
-        <h3 className="font-press-start text-xl mb-1">{title}</h3>
-        <p className="font-pixel text-gray-400 mb-4">{description}</p>
+        <h3 className="text-xl text-white mb-1">{title}</h3>
+        <p className="text-gray-400 mb-4">{description}</p>
         <Link 
           to={path}
           className="block bg-yellow-400 hover:bg-yellow-500 text-black font-medium py-2 px-4 rounded text-center"
