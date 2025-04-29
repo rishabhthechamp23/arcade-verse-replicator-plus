@@ -25,6 +25,8 @@ const App = () => (
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/about" element={<About />} />
           <Route path="/coinflip" element={<CoinFlip />} />
+          <Route path="/connect" element={<About />} /> {/* Temporary using About page for /connect */}
+          <Route path="/faq" element={<About />} /> {/* Temporary using About page for /faq */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
