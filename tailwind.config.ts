@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,12 +19,25 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'press-start': ['"Press Start 2P"', 'cursive'],
+				'pixel': ['"VT323"', 'monospace'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				arcade: {
+					purple: '#4b0082',
+					neon: '#ff00ff',
+					blue: '#00a2ff',
+					pink: '#ff3c7c',
+					green: '#39ff14',
+					dark: '#0f0f1a',
+					darker: '#060616',
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -84,11 +98,30 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'neon-pulse': {
+					'0%, 100%': { 
+						textShadow: '0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff'
+					},
+					'50%': { 
+						textShadow: '0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff'
+					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'flip': {
+					'0%': { transform: 'rotateY(0)' },
+					'100%': { transform: 'rotateY(180deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'neon-pulse': 'neon-pulse 2s infinite',
+				'float': 'float 6s ease-in-out infinite',
+				'flip': 'flip 0.6s forwards'
 			}
 		}
 	},
