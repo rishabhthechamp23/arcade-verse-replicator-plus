@@ -9,6 +9,8 @@ import Games from "./pages/Games";
 import Leaderboard from "./pages/Leaderboard";
 import About from "./pages/About";
 import CoinFlip from "./pages/CoinFlip";
+import DiceGame from "./pages/DiceGame";
+import MinesGame from "./pages/MinesGame";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +27,8 @@ const App = () => (
           <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="/about" element={<About />} />
           <Route path="/coinflip" element={<CoinFlip />} />
+          <Route path="/dice" element={<DiceGame />} />
+          <Route path="/mines" element={<MinesGame />} />
           <Route path="/connect" element={<About />} /> {/* Temporary using About page for /connect */}
           <Route path="/faq" element={<About />} /> {/* Temporary using About page for /faq */}
           <Route path="*" element={<NotFound />} />

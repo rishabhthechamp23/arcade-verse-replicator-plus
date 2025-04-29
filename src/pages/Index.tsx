@@ -1,7 +1,4 @@
-
 import { Link } from "react-router-dom";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import GameCard from "../components/GameCard";
 import { Search, ArrowRight, Wallet } from "lucide-react";
 
@@ -12,7 +9,7 @@ const Index = () => {
       title: "Mines Game",
       description: "Strategic Mining Challenge",
       imageUrl: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2064&q=80",
-      path: "/coinflip",
+      path: "/mines",
       rating: 4.2
     },
     {
@@ -20,7 +17,7 @@ const Index = () => {
       title: "Dice Game",
       description: "Roll for Fortune",
       imageUrl: "https://images.unsplash.com/photo-1614728263952-84ea256f9679?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80",
-      path: "/coinflip",
+      path: "/dice",
       rating: 4.5
     },
     {
@@ -34,12 +31,12 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-black">
+    <div className="min-h-screen flex flex-col bg-black font-sans">
       {/* Custom Header */}
       <header className="w-full py-4 px-4 md:px-8 bg-black border-b border-gray-800">
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/" className="flex items-center gap-2">
-            <span className="text-purple-500 text-3xl">♚</span>
+            <span className="text-yellow-400 text-3xl">♚</span>
             <span className="text-xl text-white">STELLAR ARCADE</span>
           </Link>
           
@@ -107,11 +104,11 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="flex items-center gap-3 mb-8">
             <span className="text-yellow-400 text-2xl">🎮</span>
-            <h2 className="text-2xl text-white">Casino Games on Stellar</h2>
+            <h2 className="text-2xl text-white">Popular Games</h2>
           </div>
 
           {/* Main Games Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {games.map(game => (
               <GameCard 
                 key={game.id}
