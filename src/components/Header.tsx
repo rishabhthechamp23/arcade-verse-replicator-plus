@@ -74,7 +74,6 @@ const Header = () => {
             <Button 
               variant="outline" 
               className="font-pixel bg-arcade-dark border-arcade-neon text-white hover:bg-arcade-dark/80 animate-fade-in"
-              onClick={connectWallet}
             >
               <Wallet className="mr-2 h-4 w-4" />
               {walletAddress}
