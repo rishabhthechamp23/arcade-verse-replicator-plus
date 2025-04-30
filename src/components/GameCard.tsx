@@ -13,6 +13,11 @@ interface GameCardProps {
 }
 
 const GameCard = ({ id, title, description, imageUrl, path, rating }: GameCardProps) => {
+  // Check if this is the Mines game card and use the new image
+  const finalImageUrl = id === "mines" 
+    ? "/lovable-uploads/eefb939f-b3e4-4713-8893-a2a6e7bdeee8.png" 
+    : imageUrl;
+    
   return (
     <motion.div 
       className="bg-black rounded-lg overflow-hidden border border-gray-800 hover:border-[#0FA0CE] transition-all duration-300"
@@ -23,7 +28,7 @@ const GameCard = ({ id, title, description, imageUrl, path, rating }: GameCardPr
     >
       <div className="h-60 overflow-hidden relative">
         <img 
-          src={imageUrl} 
+          src={finalImageUrl} 
           alt={title} 
           className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
         />
