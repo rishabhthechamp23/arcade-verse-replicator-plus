@@ -207,7 +207,7 @@ const MinesGame = () => {
         </div>
       </main>
       
-      <style jsx="true">{`
+      <style>{`
         .glow-text-orange {
           text-shadow: 0 0 10px #ff7b00, 0 0 20px #ff7b00, 0 0 30px #ff7b00;
         }
