@@ -3,7 +3,7 @@ import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
-import { Dices, Refresh } from "lucide-react";
+import { Dices, RefreshCw } from "lucide-react";
 import { motion } from "framer-motion";
 import { toast } from "@/components/ui/use-toast";
 
@@ -231,7 +231,7 @@ const DiceGame = () => {
                 variant="outline"
                 disabled={rolling}
               >
-                <Refresh className="mr-2 h-4 w-4" />
+                <RefreshCw className="mr-2 h-4 w-4" />
                 Reset Game
               </Button>
             </div>

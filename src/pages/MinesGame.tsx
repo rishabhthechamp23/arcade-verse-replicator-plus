@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
-import { Mine, Refresh } from "lucide-react";
+import { Bomb, RefreshCw } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
 
 type MineField = Array<{
@@ -115,7 +115,7 @@ const MinesGame = () => {
     }
     
     if (cell.isMine) {
-      return <Mine className="h-5 w-5 text-red-500" />;
+      return <Bomb className="h-5 w-5 text-red-500" />;
     }
     
     if (cell.adjacentMines > 0) {
@@ -157,7 +157,7 @@ const MinesGame = () => {
                 variant="outline" 
                 className="flex items-center gap-2"
               >
-                <Refresh className="h-4 w-4" />
+                <RefreshCw className="h-4 w-4" />
                 New Game
               </Button>
             </div>
