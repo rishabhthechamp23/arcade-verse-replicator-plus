@@ -29,7 +29,6 @@ const App = () => (
           <Route path="/coinflip" element={<CoinFlip />} />
           <Route path="/dice" element={<DiceGame />} />
           <Route path="/mines" element={<MinesGame />} />
-          <Route path="/connect" element={<About />} /> {/* Temporary using About page for /connect */}
           <Route path="/faq" element={<About />} /> {/* Temporary using About page for /faq */}
           <Route path="*" element={<NotFound />} />
         </Routes>

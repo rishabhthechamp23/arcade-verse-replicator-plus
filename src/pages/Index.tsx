@@ -1,8 +1,39 @@
+
 import { Link } from "react-router-dom";
 import GameCard from "../components/GameCard";
 import { Search, ArrowRight, Wallet } from "lucide-react";
+import { toast } from "@/components/ui/use-toast";
+import { useState } from "react";
 
 const Index = () => {
+  const [isConnected, setIsConnected] = useState(false);
+  const [walletAddress, setWalletAddress] = useState("");
+
+  const connectWallet = () => {
+    // Simulate wallet connection
+    setIsConnected(false);
+    
+    // Show loading toast
+    toast({
+      title: "Connecting wallet...",
+      description: "Please wait while we connect to your wallet",
+    });
+    
+    // Simulate delay for connection
+    setTimeout(() => {
+      const mockAddress = "stlr1q9jch3...7tkp5q";
+      setIsConnected(true);
+      setWalletAddress(mockAddress);
+      
+      // Show success toast
+      toast({
+        title: "Wallet connected!",
+        description: `Connected to ${mockAddress}`,
+        variant: "default",
+      });
+    }, 1500);
+  };
+
   const games = [
     {
       id: "1",
@@ -55,12 +86,23 @@ const Index = () => {
               />
               <Search className="absolute left-3 top-2.5 text-gray-400 w-5 h-5" />
             </div>
-            <Link
-              to="/connect"
-              className="bg-[#0FA0CE] hover:bg-[#0c8eb8] text-white px-4 py-2 rounded-full flex items-center gap-2"
-            >
-              Connect Wallet
-            </Link>
+            {isConnected ? (
+              <button
+                onClick={connectWallet}
+                className="bg-gray-800 hover:bg-gray-700 text-white px-4 py-2 rounded-full flex items-center gap-2 animate-fade-in"
+              >
+                <Wallet className="w-4 h-4" />
+                {walletAddress}
+              </button>
+            ) : (
+              <button
+                onClick={connectWallet}
+                className="bg-[#0FA0CE] hover:bg-[#0c8eb8] text-white px-4 py-2 rounded-full flex items-center gap-2 animate-pulse"
+              >
+                <Wallet className="w-4 h-4" />
+                Connect Wallet
+              </button>
+            )}
           </div>
         </div>
       </header>
@@ -132,13 +174,23 @@ const Index = () => {
             <p className="text-xl mb-8 text-white">
               Connect your wallet and start playing games on Stellar today!
             </p>
-            <Link
-              to="/connect"
-              className="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-purple-800 py-3 px-8 rounded-md transition-colors duration-300"
-            >
-              <Wallet className="w-5 h-5" />
-              Connect Wallet
-            </Link>
+            {isConnected ? (
+              <button
+                onClick={connectWallet}
+                className="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-purple-800 py-3 px-8 rounded-md transition-colors duration-300 animate-fade-in"
+              >
+                <Wallet className="w-5 h-5" />
+                {walletAddress}
+              </button>
+            ) : (
+              <button
+                onClick={connectWallet}
+                className="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-purple-800 py-3 px-8 rounded-md transition-colors duration-300 animate-pulse"
+              >
+                <Wallet className="w-5 h-5" />
+                Connect Wallet
+              </button>
+            )}
           </div>
         </div>
       </section>
